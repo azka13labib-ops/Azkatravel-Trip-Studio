@@ -1,9 +1,6 @@
 import type { ReactNode } from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
-=======
->>>>>>> 6b5feccfc1e588c5c88da6430d914ac3f5e49f0c
 import Footer from './Footer';
 import Navbar from './Navbar';
 
@@ -17,7 +14,6 @@ export default function MainLayout({ children }: MainLayoutProps) {
       <Navbar />
       <main className="flex-1">{children}</main>
       <Footer />
-<<<<<<< HEAD
       
       {/* Floating Home Button (Mobile Only) */}
       <Link
@@ -27,8 +23,6 @@ export default function MainLayout({ children }: MainLayoutProps) {
       >
         <Home size={24} />
       </Link>
-=======
->>>>>>> 6b5feccfc1e588c5c88da6430d914ac3f5e49f0c
     </div>
   );
 }

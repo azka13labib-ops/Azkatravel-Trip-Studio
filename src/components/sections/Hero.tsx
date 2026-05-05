@@ -4,7 +4,6 @@ import { VideoText } from '@/components/ui/video-text';
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden">
-<<<<<<< HEAD
       <video
         autoPlay
         loop
@@ -14,13 +13,6 @@ export default function Hero() {
       >
         <source src={`${import.meta.env.BASE_URL}WhatsApp Video 2026-05-05 at 21.48.39.mp4`} type="video/mp4" />
       </video>
-=======
-      <img
-        src="/unnamed.jpg"
-        alt="Seaside cliffs"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
->>>>>>> 6b5feccfc1e588c5c88da6430d914ac3f5e49f0c
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />
 
       <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-4 text-center text-white">
@@ -28,11 +20,7 @@ export default function Hero() {
           Azkatravel Studio
         </p>
         <VideoText
-<<<<<<< HEAD
           src={`${import.meta.env.BASE_URL}ssstik.io_@sadxgt_1767015577555.mp4`}
-=======
-          src="/ssstik.io_@sadxgt_1767015577555.mp4"
->>>>>>> 6b5feccfc1e588c5c88da6430d914ac3f5e49f0c
           className="h-[30vh] w-full text-[14vw] font-black tracking-widest"
         >
           EXPLORE
