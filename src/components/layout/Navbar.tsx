@@ -15,13 +15,21 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+<<<<<<< HEAD
     <>
       <header className="sticky top-0 z-50 w-full border-b border-slate-200/70 bg-white/85 backdrop-blur">
+=======
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200/70 bg-white/85 backdrop-blur">
+>>>>>>> 6b5feccfc1e588c5c88da6430d914ac3f5e49f0c
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-3">
           <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-slate-900">
             <img
+<<<<<<< HEAD
               src={`${import.meta.env.BASE_URL}logo.jpg`}
+=======
+              src="/logo.jpg"
+>>>>>>> 6b5feccfc1e588c5c88da6430d914ac3f5e49f0c
               alt="Azkatravel logo"
               className="h-full w-full object-cover"
               loading="lazy"
@@ -69,6 +77,7 @@ export default function Navbar() {
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-full border border-slate-200 p-2 text-slate-700 transition hover:border-slate-300 md:hidden"
+<<<<<<< HEAD
             onClick={() => setIsOpen(true)}
             aria-label="Open navigation"
             aria-expanded={isOpen}
@@ -134,5 +143,46 @@ export default function Navbar() {
         </nav>
       </div>
     </>
+=======
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Toggle navigation"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <X size={18} /> : <Menu size={18} />}
+          </button>
+        </div>
+      </div>
+
+      {isOpen ? (
+        <div className="border-t border-slate-200/70 bg-white px-4 py-4 md:hidden">
+          <nav className="flex flex-col gap-2">
+            {links.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  cn(
+                    "rounded-xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-900",
+                    isActive && "bg-slate-100 text-slate-900",
+                  )
+                }
+                end={link.to === '/'}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.label}
+              </NavLink>
+            ))}
+            <Link
+              to="/contact"
+              className="mt-2 rounded-xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900"
+              onClick={() => setIsOpen(false)}
+            >
+              Konsultasi
+            </Link>
+          </nav>
+        </div>
+      ) : null}
+    </header>
+>>>>>>> 6b5feccfc1e588c5c88da6430d914ac3f5e49f0c
   );
 }
